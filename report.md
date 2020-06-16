@@ -7,4 +7,6 @@ In this project, we'll explore the cities of New York, Tokyo, Hong Kong, Sydney,
 ## Data
 For this project, we'll use the [Foursquare API](https://developer.foursquare.com). For each city mentioned above, we'll ask the API for the restaurants (endpoint `/venues/explore?section=food&near=city_name`), and get for each restaurant (`response.groups[0].items[]`) the type of cuisine from the `venue.categories` field. 
 
+The complete list of venue categories is available in (https://developer.foursquare.com/docs/build-with-foursquare/categories/). From here, I'll manually extract the categories under `food` corresponding to national cuisines (Spanish, Indian, Thai...), in order to be able of filtering the restaurants only by the nationality.
+
 Then, we'll be able of extracting a top 5 of cuisines for each city, and plot them in a bar graph. For each cuisine, we'll be able of showing the cities where there are more restaurants.
